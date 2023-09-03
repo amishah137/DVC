@@ -97,3 +97,119 @@
       ```
   20. 
   21. 
+
+
+### Using Google Storage as remote repo to store data
+
+  1. Create a folder mlops/DVCDemo
+     ```
+     mkdir mlops/dvcDemo && cd dvcDemo
+     ```
+  2. Create a new environment
+     ```
+     conda create -p mlops python==3.9 -y
+     conda activate mlops
+     ```
+  3. Install dvc into the environment 'mlops'
+     ```
+     pip3 install dvc
+     ```
+  4. Initialize git
+     ```
+     git init
+     ```
+  5. Initialize the dvc
+     ```
+     dvc init
+     ```
+     Now, check newly created files
+     ```
+     git status
+     ```
+  7. Add these files to staging area and commit the changes
+     ```
+     git add --all
+     ```
+     ```
+     git commit -m 'Initial Commit'
+     ```
+  8. Change the default branch to master branch
+     ```
+     git branch -M main
+     ```
+  9. Add remote repo
+     ```
+     git remote add origin https://github.com/amishah137/dvcDemo.git
+     ```
+     Check the remote repo
+     ```
+     git remote -v
+     ```
+  10. Now push contents
+     ```
+     git push -u origin main
+     ```
+  11. Add remote GS bucket
+     ```
+     dvc remote add -d gs_remote gs://dvc_project 
+     ```
+     Note: Use command to autheticate
+     ```
+     gcloud auth login
+     ```
+     Check contents of the bucket
+     ```
+     gsutils ls gs://dvc_project
+     ```
+  12. Put the data file 'data.csv' in the folder.
+  13. Git contents are not changed
+     ```
+     git status
+     ```
+     dvc contents are changed
+     ```
+     dvc status
+     ```
+  14. Add data file to dvc to track
+     ```
+     dvc add data.csv
+     ```
+  15. Push data to remote repo
+      ```
+      dvc push
+      ```
+  16. Add the changes to staging area for git
+      ```
+      git add --all
+      ```
+  17. Commit the changes
+      ```
+      git commit -m "first_ver"
+      ```
+  18. Add tag to the commit
+      ```
+      git tag v1.0
+      ```
+  19.Push the changes to remote repo for Git
+      ```
+      git push -u origin main
+      ```
+  20. push the tag
+      ```
+      git push --tag
+      ```
+  21. Modify the data.csv
+  22. Repeat steps 13 - 20.
+  23. Switch to v1.0
+      ```
+      git checkout v1.0
+      ```
+  24. pull the data with v1.0
+      ```
+      dvc pull
+      ```
+      you can see old data in the data.csv file
+
+
+
+

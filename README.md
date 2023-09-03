@@ -41,35 +41,35 @@
      dvc add data/data.txt
      ```
   9. The two files created by dvc to be tracked by git
-      ```
-      git add data/.gitignore
-      ```
-      ```
-      git add data/data.txt.dvc
-      ```
+     ```
+     git add data/.gitignore
+     ```
+     ```
+     git add data/data.txt.dvc
+     ```
   10. Now, Edit the contents of data.txt
-      ```
-      First version of Data.
-      Second version of Data.
-      ```
+     ```
+     First version of Data.
+     Second version of Data.
+     ```
   11. commit file data.txt to dvc for tracking again.
-      ```
-      dvc add data/data.txt
-      ```
+     ```
+     dvc add data/data.txt
+     ```
   12. The file modified by dvc to be tracked by git
-      ```
-      git add data/data.txt.dvc
-      ```
+     ```
+     git add data/data.txt.dvc
+     ```
   13. commit the changes to git
-      ```
-      git commit -m "DVC"
-      ```
+     ```
+     git commit -m "DVC"
+     ```
   14. Now, again Edit the contents of data.txt
-      ```
-      First version of Data.
-      Second version of Data.
-      Third version
-      ```
+     ```
+     First version of Data.
+     Second version of Data.
+     Third version
+     ```
   15. commit file data.txt to dvc for tracking again.
       ```
       dvc add data/data.txt
@@ -144,11 +144,11 @@
      ```
      git remote -v
      ```
-  11. Now push contents
+  9. Now push contents
      ```
      git push -u origin main
      ```
-  12. Add remote GS bucket
+  10. Add remote GS bucket
      ```
      dvc remote add -d gs_remote gs://dvc_project 
      ```
@@ -160,8 +160,8 @@
      ```
      gsutils ls gs://dvc_project
      ```
-  13. Put the data file 'data.csv' in the folder.
-  14. Git contents are not changed
+  11. Put the data file 'data.csv' in the folder.
+  12. Git contents are not changed
      ```
      git status
      ```
@@ -169,41 +169,41 @@
      ```
      dvc status
      ```
-  15. Add data file to dvc to track
+  13. Add data file to dvc to track
      ```
      dvc add data.csv
      ```
-  16. Push data to remote repo
+  14. Push data to remote repo
       ```
       dvc push
       ```
-  17. Add the changes to staging area for git
+  15. Add the changes to staging area for git
       ```
       git add --all
       ```
-  18. Commit the changes
+  16. Commit the changes
       ```
       git commit -m "first_ver"
       ```
-  19. Add tag to the commit
+  17. Add tag to the commit
       ```
       git tag v1.0
       ```
-  19.Push the changes to remote repo for Git
+  18.Push the changes to remote repo for Git
       ```
       git push -u origin main
       ```
-  20. push the tag
+  19. push the tag
       ```
       git push --tag
       ```
-  21. Modify the data.csv
-  22. Repeat steps 13 - 20.
-  23. Switch to v1.0
+  20. Modify the data.csv
+  21. Repeat steps 12 - 19.
+  22. Switch to v1.0
       ```
       git checkout v1.0
       ```
-  24. pull the data with v1.0
+  23. pull the data with v1.0
       ```
       dvc pull
       ```

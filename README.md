@@ -36,66 +36,65 @@
      ```
      First version of Data.
      ```
-  9. DVC to track the data file data.txt
+  8. DVC to track the data file data.txt
      ```
      dvc add data/data.txt
      ```
-  11. The two files created by dvc to be tracked by git
+  9. The two files created by dvc to be tracked by git
       ```
       git add data/.gitignore
       ```
       ```
       git add data/data.txt.dvc
       ```
-  12. Now, Edit the contents of data.txt
+  10. Now, Edit the contents of data.txt
       ```
       First version of Data.
       Second version of Data.
       ```
-  14. commit file data.txt to dvc for tracking again.
+  11. commit file data.txt to dvc for tracking again.
       ```
       dvc add data/data.txt
       ```
-  15. The file modified by dvc to be tracked by git
+  12. The file modified by dvc to be tracked by git
       ```
       git add data/data.txt.dvc
       ```
-  16. commit the changes to git
+  13. commit the changes to git
       ```
       git commit -m "DVC"
       ```
-  18. Now, again Edit the contents of data.txt
+  14. Now, again Edit the contents of data.txt
       ```
       First version of Data.
       Second version of Data.
       Third version
       ```
-  14. commit file data.txt to dvc for tracking again.
+  15. commit file data.txt to dvc for tracking again.
       ```
       dvc add data/data.txt
       ```
-  15. The file modified by dvc to be tracked by git
+  16. The file modified by dvc to be tracked by git
       ```
       git add data/data.txt.dvc
       ```
-  16. commit the changes to git
+  17. commit the changes to git
       ```
       git commit -m "DVC_2"
       ```
-  17. check the git log
+  18. check the git log
       ```
       git log
       ```
       Copy the commit-id of 'DVC'
-  18. Now, switch git branch to 'DVC'
+  19. Now, switch git branch to 'DVC'
       ```
       git checkout {commit-id}
       ```
-  19. update the contents of data.txt as with 'DVC' commit
+  20. update the contents of data.txt as with 'DVC' commit
       ```
       dvc checkout
-      ```
-  20. 
+      ``` 
   21. 
 
 
@@ -126,27 +125,25 @@
      ```
      git status
      ```
-  7. Add these files to staging area and commit the changes
+  6. Add these files to staging area and commit the changes
      ```
      git add --all
      ```
      ```
      git commit -m 'Initial Commit'
      ```
-  8. Change the default branch to master branch
+  7. Change the default branch to master branch
      ```
      git branch -M main
      ```
-  9. Add remote repo
-    ```
-    git remote add origin https://github.com/amishah137/dvcDemo.git
-    ```
-    ```
-    Check the remote repo
-    ```
-    ```
-    git remote -v
-    ```
+  8. Add remote repo
+     ```
+     git remote add origin https://github.com/amishah137/dvcDemo.git
+     ```
+     Check the remote repo
+     ```
+     git remote -v
+     ```
   11. Now push contents
      ```
      git push -u origin main

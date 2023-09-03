@@ -189,7 +189,7 @@
       ```
       git tag v1.0
       ```
-  18.Push the changes to remote repo for Git
+  18. Push the changes to remote repo for Git
       ```
       git push -u origin main
       ```
@@ -198,16 +198,18 @@
       git push --tag
       ```
   20. Modify the data.csv
-  21. Repeat steps 12 - 19.
+  21. Repeat steps 12 - 19
   22. Switch to v1.0
       ```
       git checkout v1.0
       ```
-  23. pull the data with v1.0
+  23.  pull the data with v1.0
       ```
       dvc pull
       ```
-      you can see old data in the data.csv file
+      you can see old data in the data.csv file 
+  24. 
+
 
 
 

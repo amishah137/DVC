@@ -138,18 +138,20 @@
      git branch -M main
      ```
   9. Add remote repo
-     ```
-     git remote add origin https://github.com/amishah137/dvcDemo.git
-     ```
-     Check the remote repo
-     ```
-     git remote -v
-     ```
-  10. Now push contents
+    ```
+    git remote add origin https://github.com/amishah137/dvcDemo.git
+    ```
+    ```
+    Check the remote repo
+    ```
+    ```
+    git remote -v
+    ```
+  11. Now push contents
      ```
      git push -u origin main
      ```
-  11. Add remote GS bucket
+  12. Add remote GS bucket
      ```
      dvc remote add -d gs_remote gs://dvc_project 
      ```
@@ -161,8 +163,8 @@
      ```
      gsutils ls gs://dvc_project
      ```
-  12. Put the data file 'data.csv' in the folder.
-  13. Git contents are not changed
+  13. Put the data file 'data.csv' in the folder.
+  14. Git contents are not changed
      ```
      git status
      ```
@@ -170,23 +172,23 @@
      ```
      dvc status
      ```
-  14. Add data file to dvc to track
+  15. Add data file to dvc to track
      ```
      dvc add data.csv
      ```
-  15. Push data to remote repo
+  16. Push data to remote repo
       ```
       dvc push
       ```
-  16. Add the changes to staging area for git
+  17. Add the changes to staging area for git
       ```
       git add --all
       ```
-  17. Commit the changes
+  18. Commit the changes
       ```
       git commit -m "first_ver"
       ```
-  18. Add tag to the commit
+  19. Add tag to the commit
       ```
       git tag v1.0
       ```

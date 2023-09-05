@@ -10,7 +10,7 @@
      conda create -p mlops python==3.9 -y
      ```
      ```
-     conda activate mlops
+     conda activate /home/ami/dvcdemo/mlops
      ```
   3. Install dvc into the environment 'mlops'
      ```

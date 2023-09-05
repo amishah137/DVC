@@ -56,7 +56,7 @@
       ```
       git add data.txt.dvc
       ```
-  12. commit the changes to git
+  12. Commit the changes to git
       ```
       git commit -m "DVC"
       ```
@@ -68,37 +68,42 @@
       4,Pramod,DevOps
       5,Nukul,LLM
       ```
-  14. Again, The two files created by dvc to be tracked by git
+  14. Again, DVC to track the data file data.csv
       ```
-      git add .gitignore
+      dvc add data.csv
       ```
+  15. Again, The one file modified by dvc to be tracked by git
       ```
       git add data.txt.dvc
-      ```
-  15. Again, commit the changes to git
-      ```
-      git commit -m "DVC_2"
       ```
   16. Again, commit the changes to git
       ```
       git commit -m "DVC_2"
       ```
-  17. check the git log
+  17. Check the git log
       ```
       git log
       ```
       Copy the commit-id of 'DVC'
-  18. Now, switch git branch to 'DVC'
+  18. Now, switch to git branch 'DVC'
       ```
       git checkout {commit-id}
       ```
-  19. update the contents of data.txt as with 'DVC' commit
+  19. Update the contents of data.txt as with 'DVC' commit
       ```
       dvc checkout
-      ``` 
+      ```
+      You can see old data in file data.csv
 
-  
-
+#### After steps
+1. deactivate conda environment
+   ```
+   conda deactivate
+   ```
+2. Remove the environment
+   ```
+   conda remove --name mlops --all
+   ```
 
 ### Using Google Storage as remote repo to store data
 

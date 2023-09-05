@@ -84,10 +84,10 @@
       ```
       git log
       ```
-      Copy the commit-id of 'DVC'
+      Copy the SHA-id of 'DVC'
   18. Now, switch to git branch 'DVC'
       ```
-      git checkout {commit-id}
+      git checkout {SHA-id}
       ```
   19. Update the contents of data.txt as with 'DVC' commit
       ```

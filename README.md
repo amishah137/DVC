@@ -58,7 +58,7 @@
       ```
   12. Commit the changes to git
       ```
-      git commit -m "DVC"
+      git commit -m "dvc_first_ver_db"
       ```
   13. Now, Edit the contents of data.csv
       ```
@@ -78,7 +78,7 @@
       ```
   16. Again, commit the changes to git
       ```
-      git commit -m "DVC_2"
+      git commit -m "dvc_second_ver_db"
       ```
   17. Check the git log
       ```
@@ -102,7 +102,7 @@
       ```
       dvc checkout
       ```
-  22. 
+  22. Now, you can go back forth between data versions.
 
 #### After steps
 1. deactivate conda environment
@@ -113,6 +113,7 @@
    ```
    conda remove --name mlops --all
    ```
+3. Remove dvcdemo folder
 
 ### Using Google Storage as remote repo to store data
 

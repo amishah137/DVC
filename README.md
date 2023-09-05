@@ -84,16 +84,25 @@
       ```
       git log
       ```
-      Copy the SHA-id of 'DVC'
+      Copy the SHA-id of 'DVC' and press ':q' to exit 'git log'
   18. Now, switch to git branch 'DVC'
       ```
       git checkout {SHA-id}
       ```
-  19. Update the contents of data.txt as with 'DVC' commit
+  19. Update the contents of data.csv as with 'DVC' commit
       ```
       dvc checkout
       ```
       You can see old data in file data.csv
+  20. Now, checkout to last branch
+      ```
+      git checkout master
+      ```
+  21. Now, pull last updated data.
+      ```
+      dvc checkout
+      ```
+  22. 
 
 #### After steps
 1. deactivate conda environment

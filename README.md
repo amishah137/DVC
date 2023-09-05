@@ -54,7 +54,7 @@
       git add .gitignore
       ```
       ```
-      git add data.txt.dvc
+      git add data.csv.dvc
       ```
   12. Commit the changes to git
       ```
@@ -74,7 +74,7 @@
       ```
   15. Again, The one file modified by dvc to be tracked by git
       ```
-      git add data.txt.dvc
+      git add data.csv.dvc
       ```
   16. Again, commit the changes to git
       ```

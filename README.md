@@ -1,101 +1,104 @@
 # DVC
 
 ### Steps to follow:
-  1. Create a folder mlops/DVCDemo
+  1. Create a folder dvcdemo
      ```
-     mkdir mlops/DVCDemo
+     mkdir dvcdemo && cd dvcdemo
      ```
   2. Create a new environment
      ```
      conda create -p mlops python==3.9 -y
      ```
-  3. Create a file .gitignore
-  4. Install DVC into the environment 'mlops'
+     ```
+     conda activate mlops
+     ```
+  3. Install dvc into the environment 'mlops'
      ```
      pip3 install dvc
      ```
-  5. Initialize the dvc
+  4. Create a folder dvc inside dvcdemo.
+     ```
+     mkdir dvc && cd dvc
+     ```
+  5. Initialize git
+     ```
+     git init
+     ```
+  6. Initialize dvc
      ```
      dvc init
      ```
-  6. Commit the changes to git
+
+  7. Commit the changes to git
      ```
      git status
      ```
      ```
-     git commit -m "DVC init"
+     git commit -m "dvc_init"
      ```
-  7. create a data folder and keep data file 'data.txt' inside
+  8. Create a file 'data.csv' and put contents inside and save it.
      ```
-     mkdir data && cd data
+     nano data.csv
      ```
      ```
-     nano data.txt
+     1,Ami,MLE
+     2,Shubham,DS
+     3,Purav,MLE
      ```
-     Put contests
-     ```
-     First version of Data.
-     ```
-  8. DVC to track the data file data.txt
+  9. DVC to track the data file data.txt
      ```
      dvc add data/data.txt
      ```
-  9. The two files created by dvc to be tracked by git
+
+  10. The two files created by dvc to be tracked by git
      ```
-     git add data/.gitignore
+     git add .gitignore
      ```
      ```
-     git add data/data.txt.dvc
+     git add data.txt.dvc
      ```
-  10. Now, Edit the contents of data.txt
-     ```
-     First version of Data.
-     Second version of Data.
-     ```
-  11. commit file data.txt to dvc for tracking again.
-     ```
-     dvc add data/data.txt
-     ```
-  12. The file modified by dvc to be tracked by git
-     ```
-     git add data/data.txt.dvc
-     ```
-  13. commit the changes to git
+  11. commit the changes to git
      ```
      git commit -m "DVC"
      ```
-  14. Now, again Edit the contents of data.txt
+  12. Now, Edit the contents of data.csv
      ```
-     First version of Data.
-     Second version of Data.
-     Third version
+     1,Ami,MLE
+     2,Shubham,DS
+     3,Purav,MLE
+     4,Pramod,DevOps
+     5,Nukul,LLM
      ```
-  15. commit file data.txt to dvc for tracking again.
-      ```
-      dvc add data/data.txt
-      ```
-  16. The file modified by dvc to be tracked by git
-      ```
-      git add data/data.txt.dvc
-      ```
-  17. commit the changes to git
-      ```
-      git commit -m "DVC_2"
-      ```
-  18. check the git log
+  13. Again, DVC to track the data file data.txt
+     ```
+     dvc add data/data.txt
+     ``` 
+  14. Again, The two files created by dvc to be tracked by git
+     ```
+     git add .gitignore
+     ```
+     ```
+     git add data.txt.dvc
+     ```
+  15. Again, commit the changes to git
+     ```
+     git commit -m "DVC_2"
+     ```
+
+  16. check the git log
       ```
       git log
       ```
       Copy the commit-id of 'DVC'
-  19. Now, switch git branch to 'DVC'
+  17. Now, switch git branch to 'DVC'
       ```
       git checkout {commit-id}
       ```
-  20. update the contents of data.txt as with 'DVC' commit
+  18. update the contents of data.txt as with 'DVC' commit
       ```
       dvc checkout
       ``` 
-  21. 
+  
 
 
 ### Using Google Storage as remote repo to store data

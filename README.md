@@ -1,6 +1,6 @@
 # DVC
-
-### Steps to follow:
+### Let's start dvc with local repository.
+#### Steps to follow:
   1. Create a folder dvcdemo
      ```
      mkdir dvcdemo && cd dvcdemo
@@ -28,7 +28,7 @@
      ```
      dvc init
      ```
-
+     This command creates three files.
   7. Commit the changes to git
      ```
      git status
@@ -47,7 +47,7 @@
      ```
   9. DVC to track the data file data.txt
      ```
-     dvc add data/data.txt
+     dvc add data.csv
      ```
   10. The two files created by dvc to be tracked by git
       ```

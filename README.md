@@ -166,30 +166,30 @@
      git push -u origin main
      ```
   10. Add remote GS bucket
-     ```
-     dvc remote add -d gs_remote gs://dvc_project 
-     ```
-     Note: Use command to autheticate
-     ```
-     gcloud auth login
-     ```
-     Check contents of the bucket
-     ```
-     gsutils ls gs://dvc_project
-     ```
+      ```
+      dvc remote add -d gs_remote gs://dvc_project 
+      ```
+      Note: Use command to autheticate
+      ```
+      gcloud auth login
+      ```
+      Check contents of the bucket
+      ```
+      gsutils ls gs://dvc_project
+      ```
   11. Put the data file 'data.csv' in the folder.
   12. Git contents are not changed
-     ```
-     git status
-     ```
-     dvc contents are changed
-     ```
-     dvc status
-     ```
+      ```
+      git status
+      ```
+      dvc contents are changed
+      ```
+      dvc status
+      ```
   13. Add data file to dvc to track
-     ```
-     dvc add data.csv
-     ```
+      ```
+      dvc add data.csv
+      ```
   14. Push data to remote repo
       ```
       dvc push

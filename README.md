@@ -115,7 +115,8 @@
    ```
 3. Remove dvcdemo folder
 
-### Using Google Storage as remote repo to store data
+
+### Let's move to Google Storage as remote repo to store data
 
   1. Create a folder mlops/DVCDemo
      ```
